@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Szkoła ponadgimnazjalna</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <section id="baner">
+        <h1>Projekt strony internetowej szkołyponadgimnazjalnej</h1>
+    </section>
+    <section id="lewy">
+        <table>
+            <tr>
+                <th>Treść zapytania</th>
+                <th style="width: 405px;">Zrzut ekranu</th>
+            </tr>
+            <tr>
+                <td>Treść zapytania</td>
+                <td><img src="zapytanie.jpg" alt="zapytanie.jpg"></td>
+            </tr>
+            <tr>
+                <td>Treść zapytania</td>
+                <td><img src="zapytanie.jpg" alt="zapytanie.jpg"></td>
+            </tr>
+            <tr>
+                <td>Treść zapytania</td>
+                <td><img src="zapytanie.jpg" alt="zapytanie.jpg"></td>
+            </tr>
+            <tr>
+                <td>Treść zapytania</td>
+                <td><img src="zapytanie.jpg" alt="zapytanie.jpg"></td>
+            </tr>
+            <tr>
+                <td>Treść zapytania</td>
+                <td><img src="zapytanie.jpg" alt="zapytanie.jpg"></td>
+            </tr>
+
+        </table>
+    </section>
+    <section id="prawy">
+        <h2>Do pobrania</h2>
+        <ul>
+            <li><a href="#">zapytania SQL</a></li>
+            <li><a href="#">baza danych</a></li>
+        </ul>
+        <hr>
+        <h3>Wyznaczenie najniższej średniej</h3>
+            <li>Polak<input type="text" id="polak"></li>
+            <li>Nowak<input type="text" id="nowak"></li>
+            <li>Rysik<input type="text" id="rysik"></li>
+        <br>
+        <button onclick="wyznaczanie()">wyznacz</button>
+        <h3 id="wynik">Najniższa średnia:</h3>
+    </section>
+    <section id="stopka">
+        <h3>stronę wykonał: Oskar</h3>
+    </section>
+
+    <script>
+        function wyznaczanie() {
+            const polak = parseInt(document.getElementById("polak").value);
+            const nowak = parseInt(document.getElementById("nowak").value);
+            const rysik = parseInt(document.getElementById("rysik").value);
+            
+            document.getElementById("wynik").innerHTML = 'Najniższa średnia: ' + Math.min(polak, nowak, rysik);
+        }
+    </script>
+</body>
+</html>
