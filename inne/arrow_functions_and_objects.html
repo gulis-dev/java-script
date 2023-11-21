@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>   
+        body {
+            background: black;
+            color: white;  
+        }
+
+        * {
+            margin: 20px 2px;
+        }
+        
+    </style>
+</head>
+<body>       
+    
+    <script>
+        
+        /*
+            Funkcja strzałkowa nie ma dostępu 
+            do obiektu arguments, ale możemy 
+            użyć operator rest
+        */
+
+        // let show = () => console.log(arguments);
+        // show(1,2,3,4); 
+
+        let show = (...params) => console.log(params);
+        show(1,2,3,4);
+
+        let getObj = (data) => {
+            return {
+                data: data
+            };
+        }
+
+        let getObj2 = (data) => ( {
+            data: data
+        } );
+
+        console.log(getObj2("test"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    </script>
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+</body>
+</html>
