@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>   
+        body {
+            background: black;
+            color: white;  
+        }
+
+        * {
+            margin: 20px 2px;
+        }
+        
+    </style>
+</head>
+<body>       
+    
+    <script>
+        /*
+            Hoisting to przeniesienie wszystkich deklaracji 
+            zmiennych na początek funkcji, natomiast przypisania
+            wartości pozostają na swoim miejscu. Dodatkowo
+            funkcje też przenoszone są na początek programu.
+        */  
+
+        function test1() {
+            console.log(a); // undefined
+            var a = 10;
+            console.log(a); 
+        }
+        test1();
+
+
+        function test2() {
+            var a; // undefined
+            console.log(a); // undefined
+            a = 10;
+            console.log(a);
+        } 
+        test2();
+
+
+
+        foo(); // hoisting działa też dla funkcji
+
+        function foo() {
+            console.log("foo()!");
+        }
+
+        console.log(exprTest); // undefined, hoisting przeniósł
+                               // deklarację ale nie przypisaną
+                               // funkcję
+        //exprTest(); // błąd exprTest is not a function
+        var exprTest = function () {
+            console.log("exprTest()!");
+        }
+
+
+        //console.log(data); // ReferenceError: Cannot access 
+                             // 'data' before initialization
+                             // Jest hoisting ale nie przypisywane
+                             // jest undefined, więc nie możemy
+                             // odwołać się do takich let i const
+        let data; // undefined
+
+
+
+
+
+
+
+
+
+
+
+    
+    </script>
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>   
+        body {
+            background: black;
+            color: white;  
+        }
+
+        * {
+            margin: 20px 2px;
+        }
+        
+    </style>
+</head>
+<body>       
+    
+    <script>
+        /*
+           Poza blokiem zmienna let może być używana, ale gdy 
+           wewnątrz istnieje deklaracja let z tą samą nazwą
+           to powstaje przestrzeń, gdzie zmienna z poza bloku 
+           nie może być użyta tzw. Temporal Dead Zone
+        */   
+
+
+        let x = 6;
+
+        if (1 == 1) {
+            x = 100;
+            console.log(x);
+        }
+
+        console.log(x);
+
+
+        let y = 6;
+
+        if (1 == 1) {
+            y = 100; // Cannot access 'y' before initialization
+
+            let y = 9;
+            console.log(y); // 9
+        }
+
+        console.log(y); // 6
+
+
+
+    
+    </script>
+
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+</body>
+</html>

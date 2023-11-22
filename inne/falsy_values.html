@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>   
+        body {
+            background: black;
+            color: white;  
+        }
+
+        * {
+            margin: 20px 2px;
+        }
+        
+    </style>
+</head>
+<body>       
+    
+    <script>
+        
+      
+        let data = true; 
+        if (data == true) console.log("info");
+
+        data = 0; 
+        if (data == true) console.log("info");
+
+        // falsy value, przy konwersji na boolean
+        // dają false
+        if (0) console.log("nie wykona się");
+        if (-0) console.log("nie wykona się");
+        if ("") console.log("nie wykona się");
+        if (NaN) console.log("nie wykona się");
+        if (null) console.log("nie wykona się");
+        if (undefined) console.log("nie wykona się");
+        if (false) console.log("nie wykona się");
+        if (0n) console.log("nie wykona się");
+
+        // truthly values
+        if ([]) console.log("Wykona się");
+        if ({}) console.log("Wykona się");
+        if ("sdfs") console.log("Wykona się");
+        if (56) console.log("Wykona się");
+        if (function (){}) console.log("Wykona się");
+        if (true) console.log("Wykona się");
+
+
+
+        
+
+
+        
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    </script>
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+</body>
+</html>
