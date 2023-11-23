@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>   
+        body {
+            background: black;
+            color: white;  
+        }
+
+        * {
+            margin: 20px 2px;
+        }
+        
+    </style>
+</head>
+<body>       
+    
+    <script> 
+        
+        /*
+            Serializacja to zapisanie obiektu oraz jego właściwości
+            w takim stanie aby taki obiekt mógł być później łatwo
+            odtworzony.
+        */
+
+        let source = { 
+            str: "text",
+            a: 23,
+            data: {
+                b: 111,
+                arr: [1, 2, 3, 4, 5]
+            },
+            date: new Date()
+        }
+
+        let strCopy = JSON.stringify(source);
+        console.log(strCopy);
+        /*
+            {"str":"text","a":23,"data":{"b":111,"arr":[1,2,3,4,5]}}
+        */
+
+        let copy = JSON.parse(strCopy);
+        copy.date = new Date(copy.date); // zamiana daty w str
+                                         // na obiekt date
+        console.log(copy);
+        console.log(copy.date instanceof Date); // true
+
+        // Oddzielne obiekty, mamy deep copy obiektu
+        console.log(copy === source); // false
+        console.log(copy.data === source.data); // false
+        console.log(copy.data.arr === source.data.arr); // false
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+</body>
+</html>

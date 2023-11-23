@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>   
+        body {
+            background: black;
+            color: white;  
+        }
+
+        * {
+            margin: 20px 2px;
+        }
+        
+    </style>
+</head>
+<body>       
+    
+    <script>
+        
+        let arr = ["Ola", "Ania", "Kasia", "Ola", "Zuza"];
+
+        let newArr = arr.map(function (value, index, array) {
+            return value + "!";
+        });
+
+        console.log(newArr); // ['Ola!', 'Ania!', 'Kasia!', 'Ola!', 'Zuza!']
+
+        let arr2 = arr.map( (value) => value + "!!" );
+        console.log(arr2); // ['Ola!!', 'Ania!!', 'Kasia!!', 'Ola!!', 'Zuza!!']
+
+        let nums = [1, 2, 4, 8, 16, 23];
+        let results = nums.map(Math.sqrt);
+        console.log(results); // [1, 1.4142135623730951, 2, 2.8284271247461903, 4, 4.795831523312719]
+    
+        arr = ["Ola", "Ania", "Kasia", "Ola", "Zuza"];
+
+        let filtered = arr.filter(function (item) {
+            return item.length > 3;
+        });
+
+        console.log(filtered); // ['Ania', 'Kasia', 'Zuza']
+
+        let tab = [1,2,3,4,5,6,7];
+
+        let v = tab.reduce(function (accumulator, currentValue, index, arr) {
+            return accumulator + currentValue;
+        });
+
+        console.log(v); // 28
+
+        console.log( tab.every( v => v > 0 ) ); // true
+        console.log( tab.every( v => v > 5 ) ); // false
+
+
+        
+
+        
+
+
+        
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    </script>
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>   
+        body {
+            background: black;
+            color: white;  
+        }
+
+        * {
+            margin: 20px 2px;
+        }
+        
+    </style>
+</head>
+<body>       
+    
+    <script>
+        
+      /*
+         [].splice( start, deleteCount, item1, item2... )
+         Metoda splice pozwala na skasowanie i dodanie za
+         jednym razem kilku elementów do tablicy.
+         start określa od którego numeru indeksu zrobić
+         zmianę, deleteCount - ile skasować elementów,
+         a reszta parametrów to nowe elementy do dodania.
+         Funckja ta modyfikuje tablicę i zwraca skasowane
+         elementy
+      */
+
+      let arr = ["a", "b", "c", "d", "e", "f"];
+
+      let deleatedElements = arr.splice(1, 3);
+      console.log(deleatedElements); // ['b', 'c', 'd']
+      console.log(arr); // ['a', 'e', 'f']
+
+      arr.splice(2, 0, "G", "H", "I", "J");
+      console.log(arr); // ['a', 'e', 'G', 'H', 'I', 'J', 'f']
+
+      deleatedElements = arr.splice(1, 4, "1", "2", "3");
+      console.log(deleatedElements); // ['e', 'G', 'H', 'I']
+      console.log(arr); //  ['a', '1', '2', '3', 'J', 'f']
+
+
+
+
+
+        
+
+
+
+        
+
+
+        
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    </script>
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+</body>
+</html>
